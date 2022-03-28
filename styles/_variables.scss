@@ -1,0 +1,11 @@
+$primary-color: rgb(82, 183, 201);
+$primary-light-color: rgb(213, 221, 223);
+$primary-dark-color: rgb(83, 106, 112);
+$primary-white-color: rgb(231, 241, 241);
+$primary-radius: 10px;
+$primary-red-color: rgb(228, 22, 7);
+$primary-green-color: rgb(59, 228, 7);
+$primary-gray-color: rgb(131, 162, 170);
+%primary-shaddow {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}

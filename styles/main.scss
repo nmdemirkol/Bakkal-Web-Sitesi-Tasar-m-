@@ -1,0 +1,61 @@
+@import "navigation-left-bar";
+@import "content";
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;1,700&display=swap");
+body {
+    margin: 0;
+    padding: 0;
+
+    .page {
+        font-family: "Josefin Sans", sans-serif;
+        display: flex;
+    }
+}
+
+.button {
+    background-color: $primary-dark-color;
+    color: white;
+    text-decoration: none;
+    border-radius: $primary-radius;
+    padding: 10px 25px 7px 25px;
+    display: table;
+    margin-bottom: 20px;
+    transition: 0.2s;
+    border: none;
+    i {
+        padding-right: 10px;
+    }
+    &:hover {
+        background-color: $primary-light-color;
+        color: $primary-dark-color;
+        transition: 0.2s;
+    }
+}
+
+input {
+    width: 300px;
+    padding: 12px 20px;
+    margin: 8px 10px;
+    box-sizing: border-box;
+    border-radius: $primary-radius;
+    border: none;
+    background-color: white;
+    color: $primary-dark-color;
+    &:hover {
+        outline: none;
+    }
+    &:focus {
+        outline: none;
+    }
+}
+.custom-select {
+    padding: 7px 0;
+    select {
+        position: relative;
+        font-family: Arial;
+        background-color: white;
+        padding: 13px 20px;
+        @extend %primary-shaddow;
+        border-radius: $primary-radius;
+        border: none;
+    }
+}

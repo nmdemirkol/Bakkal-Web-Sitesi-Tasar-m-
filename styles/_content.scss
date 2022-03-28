@@ -1,0 +1,520 @@
+@import "variables";
+
+.content {
+    flex: 1;
+    background-color: $primary-white-color;
+    z-index: 5;
+    overflow: auto;
+    height: 100vh;
+    .top-bar {
+        height: 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .header {
+            line-height: 80px;
+            padding: 0 20px;
+            font-size: 24px;
+            color: $primary-dark-color;
+            font-weight: bold;
+        }
+        .user {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            img {
+                border-radius: $primary-radius;
+                width: 40px;
+                height: 40px;
+                object-fit: cover;
+                margin-left: 10px;
+            }
+            .icon {
+                float: right;
+                width: 40px;
+                height: 40px;
+                margin-top: 10px;
+                margin-left: 15px;
+                display: table;
+                border-radius: 100%;
+                background-color: $primary-dark-color;
+                color: white;
+                font-size: 18px;
+                padding-top: 3px;
+                line-height: 37px;
+                text-align: center;
+            }
+
+            a {
+                color: $primary-dark-color;
+                text-decoration: none;
+                border-left: 1px solid $primary-light-color;
+                line-height: 60px;
+                font-size: 14px;
+                padding: 0 20px;
+                transition: 0.2s;
+                &:hover {
+                    color: black;
+                    background-color: $primary-light-color;
+                    transition: 0.2s;
+                }
+            }
+        }
+    }
+
+    .home {
+        .home-item {
+            background-color: white;
+            border-radius: $primary-radius;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            @extend %primary-shaddow;
+            margin-bottom: 20px;
+            i {
+                font-size: 64px;
+                color: $primary-color;
+            }
+            .text {
+                font-size: 22px;
+                font-weight: bold;
+                padding: 15px 0 0 0;
+                color: $primary-dark-color;
+                text-align: center;
+            }
+            .number {
+                font-size: 48px;
+                color: $primary-color;
+                padding: 0;
+                margin: 0;
+            }
+            .button {
+                margin: 0;
+                width: 100%;
+                text-align: center;
+            }
+        }
+    }
+    .users {
+        .item {
+            background-color: white;
+            position: relative;
+            border-radius: $primary-radius;
+            @extend %primary-shaddow;
+            padding: 20px 0;
+            margin-bottom: 20px;
+            a {
+                color: $primary-dark-color;
+                text-decoration: none;
+                img {
+                    width: 100px;
+                    height: 100px;
+                    margin: auto;
+                    display: table;
+                    border-radius: $primary-radius;
+                }
+                .icon {
+                    width: 100px;
+                    height: 100px;
+                    margin: auto;
+                    display: table;
+                    border-radius: 100%;
+                    background-color: $primary-dark-color;
+                    color: white;
+                    font-size: 50px;
+                    padding-top: 10px;
+                    line-height: 90px;
+                    text-align: center;
+                }
+                h1 {
+                    font-size: 16px;
+                    text-align: center;
+                    margin-top: 30px;
+                }
+                span {
+                    font-size: 16px;
+                    text-align: center;
+                    width: 100%;
+                    display: table;
+                    color: $primary-color;
+                    padding-top: 0;
+                }
+            }
+
+            a.edit-btn {
+                position: absolute;
+                top: 0;
+                right: 0;
+                color: $primary-dark-color;
+                padding: 13px 20px;
+                font-size: 22px;
+            }
+            a.delete-btn {
+                position: absolute;
+                top: 0;
+                left: 0;
+                color: $primary-dark-color;
+                padding: 20px 22px;
+                font-size: 16px;
+                color: $primary-red-color;
+            }
+        }
+    }
+
+    .user-add {
+        .text {
+            text-align: right;
+            line-height: 60px;
+        }
+
+        .send {
+            display: flex;
+
+            justify-content: right;
+            align-items: center;
+        }
+    }
+
+    .products {
+        .products-filter {
+            .filter-item {
+            }
+        }
+        .products-items {
+            .item {
+                background-color: white;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: stretch;
+                padding: 30px;
+                border-radius: $primary-radius;
+                margin-bottom: 30px;
+                @extend %primary-shaddow;
+                img {
+                    width: 80%;
+                    height: 150px;
+                    margin: auto;
+                    display: table;
+                    border-radius: $primary-radius;
+                    object-fit: cover;
+                }
+                h1 {
+                    font-size: 16px;
+                }
+                .brand {
+                    font-size: 12px;
+                }
+                .catagory {
+                    font-size: 12px;
+                }
+                .stock {
+                    font-size: 12px;
+                }
+                .price {
+                    font-size: 18px;
+                    text-align: right;
+                }
+                .product-button {
+                    background-color: $primary-dark-color;
+                    color: white;
+                    text-decoration: none;
+                    border-radius: $primary-radius;
+                    padding: 10px 25px 7px 25px;
+                    display: table;
+                    margin-top: 10px;
+                    transition: 0.2s;
+                    text-align: center;
+                    i {
+                        padding-right: 10px;
+                    }
+                    &:hover {
+                        background-color: $primary-light-color;
+                        color: $primary-dark-color;
+                        transition: 0.2s;
+                    }
+                }
+            }
+        }
+        .product-list {
+            h1 {
+                margin: 10px 5px;
+                padding: 0;
+                font-size: 24px;
+                color: $primary-dark-color;
+            }
+            .product-items {
+                .product-item {
+                    color: $primary-dark-color;
+                    background-color: white;
+                    border-radius: $primary-radius;
+                    padding: 10px 20px;
+                    margin-bottom: 10px;
+                    display: flex;
+                    justify-content: space-between;
+                    i {
+                        padding-right: 10px;
+                    }
+                    .delete-btn {
+                        color: $primary-red-color;
+                        padding-left: 10px;
+                    }
+                }
+                .product-button {
+                    background-color: $primary-dark-color;
+                    color: white;
+                    text-decoration: none;
+                    border-radius: $primary-radius;
+                    padding: 10px 25px 7px 25px;
+                    display: table;
+                    margin-bottom: 20px;
+                    transition: 0.2s;
+                    border: none;
+                    width: 100%;
+                    i {
+                        padding-right: 10px;
+                    }
+                    &:hover {
+                        background-color: $primary-light-color;
+                        color: $primary-dark-color;
+                        transition: 0.2s;
+                    }
+                }
+                .product-value {
+                    color: $primary-dark-color;
+                    padding: 20px 10px;
+                    text-align: right;
+                }
+            }
+        }
+    }
+
+    .login {
+        position: relative;
+
+        .bg {
+            z-index: -1;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: $primary-dark-color;
+        }
+        .bg2 {
+            z-index: -1;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            object-fit: cover;
+            width: 100%;
+            height: 100vh;
+            opacity: 0.3;
+        }
+
+        .login-in {
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: stretch;
+            flex-direction: column;
+            h1 {
+                text-align: center;
+                color: white;
+                font-size: 42px;
+            }
+
+            input {
+                margin: 10px 0;
+                width: auto;
+            }
+            button {
+                margin: 10px 0;
+            }
+        }
+    }
+    .roles {
+        .role-item {
+            background-color: white;
+            border-radius: $primary-radius;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            margin-bottom: 10px;
+            .text {
+            }
+            .right {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                a {
+                    padding: 0 20px;
+                    .update {
+                        color: $primary-green-color;
+                    }
+                    .delete {
+                        color: $primary-red-color;
+                    }
+                }
+                button.delete {
+                    padding: 10px 20px;
+                    background-color: $primary-red-color;
+                    color: white;
+                    border: none;
+                    border-radius: $primary-radius;
+                }
+            }
+        }
+    }
+
+    .user-detail {
+        background-color: white;
+        border-radius: $primary-radius;
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        flex-direction: row;
+        padding: 20px 100px 20px 20px;
+        margin-bottom: 10px;
+        color: $primary-dark-color;
+        position: relative;
+        .main {
+            flex: 1;
+            margin-left: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch;
+            flex-direction: column;
+            .username {
+                color: $primary-color;
+            }
+            .group {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+            }
+            .group2 {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .firstname {
+                padding-right: 10px;
+            }
+            .lastname {
+            }
+            .email {
+            }
+            .phone {
+            }
+            .active {
+                color: $primary-green-color;
+            }
+            .pasive {
+                color: $primary-red-color;
+            }
+            .role {
+                color: $primary-gray-color;
+            }
+        }
+
+        .icon {
+            width: 100px;
+            height: 100px;
+
+            display: table;
+            border-radius: 100%;
+            background-color: $primary-dark-color;
+            color: white;
+            font-size: 50px;
+            padding-top: 10px;
+            line-height: 90px;
+            text-align: center;
+        }
+
+        a.edit-btn {
+            position: absolute;
+            top: 0;
+            right: 0;
+            color: $primary-dark-color;
+            padding: 13px 20px;
+            font-size: 22px;
+        }
+        a.delete-btn {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            color: $primary-dark-color;
+            padding: 20px 22px;
+            font-size: 16px;
+            color: $primary-red-color;
+        }
+    }
+
+    .user-delete {
+        background-color: white;
+        border-radius: $primary-radius;
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        flex-direction: column;
+        padding: 20px 20px 20px 20px;
+        margin-bottom: 10px;
+        color: $primary-dark-color;
+        position: relative;
+        .username {
+            color: $primary-color;
+        }
+        .group {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        .group2 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .firstname {
+            padding-right: 10px;
+        }
+        .text {
+            padding: 20px 0 10px 0;
+            color: $primary-red-color;
+        }
+
+        .role {
+            color: $primary-gray-color;
+        }
+        a.edit-btn {
+            position: absolute;
+            top: 0;
+            right: 0;
+            color: $primary-dark-color;
+            padding: 13px 20px;
+            font-size: 22px;
+        }
+        a.delete-btn {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            color: $primary-dark-color;
+            padding: 20px 22px;
+            font-size: 16px;
+            color: $primary-red-color;
+        }
+        button.delete {
+            width: 100%;
+            padding: 10px 20px;
+            background-color: $primary-red-color;
+            color: white;
+            border: none;
+            border-radius: $primary-radius;
+        }
+    }
+}
